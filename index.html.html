@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤسسة نهاد عفنان الظفيري للمفروشات والأثاث</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="٠.jpg" alt="شعار مؤسسة نهاد عفنان الظفيري" class="logo-img" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold2);background:#fff;">
+      <div class="logo-text">
+        <b id="txtLogoTitle">مؤسسة نهاد عفنان الظفيري</b>
+        <small id="txtLogoSub">للمفروشات والأثاث</small>
+      </div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#about" data-i18n="navAbout">من نحن</a>
+      <a href="#products" data-i18n="navProducts">الأقسام</a>
+      <a href="#offers" data-i18n="navOffers">العروض</a>
+      <a href="#services" data-i18n="navServices">خدماتنا</a>
+      <a href="#delivery" data-i18n="navDelivery">التوصيل</a>
+      <a href="#contact" data-i18n="navContact">تواصل معنا</a>
+      <div class="header-controls">
+        <button class="ctrl-btn" id="themeToggle" onclick="toggleTheme()">🌙 الوضع الغامق</button>
+        <button class="ctrl-btn" id="langToggle" onclick="toggleLang()">English</button>
+      </div>
+    </nav>
+    <div class="burger" onclick="document.getElementById('menu').classList.toggle('show')">☰</div>
+  </div>
+</header>
+
+<div class="hero" id="home">
+  <div class="slides" id="heroSlides">
+    <div class="slide"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80" alt="معرض"><div class="cap"><h1 data-i18n="hero1Title">أثاث يليق ببيتك</h1><p data-i18n="hero1Desc">تشكيلة فاخرة من الكنب والمفروشات والأثاث المنزلي العصري</p><a class="btn" href="#products" data-i18n="hero1Btn">تصفح الأقسام</a></div></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1600&q=80" alt="كنب"><div class="cap"><h1 data-i18n="hero2Title">كنب ومفروشات فاخرة</h1><p data-i18n="hero2Desc">أطقم كنب مصممة بأحدث الطرز العالمية</p><a class="btn" href="#products" data-i18n="hero2Btn">اطلب الآن</a></div></div>
+  </div>
+  <button class="arrow prev" onclick="move(-1)">❯</button>
+  <button class="arrow next" onclick="move(1)">❮</button>
+  <div class="dots" id="heroDots"></div>
+</div>
+
+<section id="about"><div class="wrap">
+  <div class="about">
+    <div class="about-txt">
+      <small style="color:var(--gold);font-weight:800" data-i18n="aboutTag">من نحن</small>
+      <h2 data-i18n="aboutHeader">نهاد عفنان الظفيري للمفروشات والأثاث</h2>
+      <p data-i18n="aboutDesc">مؤسسة سعودية متخصصة في بيع المفروشات والأثاث المنزلي الفاخر بجودة مضمونة وأسعار تنافسية.</p>
+      <div class="stats">
+        <div><b>+10</b><span data-i18n="stat1">سنوات خبرة</span></div>
+        <div><b>+500</b><span data-i18n="stat2">منتج متنوع</span></div>
+        <div><b>+2000</b><span data-i18n="stat3">عميل سعيد</span></div>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="ديكور">
+  </div>
+</div></section>
+
+<section id="products" style="background:var(--bg-main)"><div class="wrap">
+  <div class="sec-title"><small data-i18n="prodSubTag">تصفح أقسامنا</small><h2 data-i18n="prodHeader">أقسام المفروشات والأثاث</h2></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="offers"><div class="wrap">
+  <div class="sec-title"><small data-i18n="offerSubTag">لا تفوتها</small><h2 data-i18n="offerHeader">العروض المميزة</h2></div>
+  <div class="offers">
+    <span class="badge" data-i18n="offerBadge">خصم حتى 30%</span>
+    <div class="slides" id="offerSlides">
+      <div class="offer-slide"><div class="im"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="عرض"></div><div class="offer-info"><span class="tag" data-i18n="offTag1">عرض خاص</span><h2 data-i18n="offTitle1">طقم كنب مجلس 7 مقاعد</h2><p data-i18n="offDesc1">كنب فاخر بتصميم عصري ومقاوم للبقع.</p><div><span class="old">5,500 ر.س</span><span class="new">3,850 ر.س</span></div><a class="btn" target="_blank" href="https://wa.me/966545613955" data-i18n="offerBtn">اطلب العرض عبر واتساب</a></div></div>
+    </div>
+    <button class="arrow prev" onclick="oMove(-1)">❯</button>
+    <button class="arrow next" onclick="oMove(1)">❮</button>
+    <div class="dots" id="offerDots"></div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="sec-title"><small data-i18n="srvSubTag">لماذا نحن؟</small><h2 data-i18n="srvHeader">خدماتنا المميزة</h2></div>
+  <div class="services">
+    <div class="srv"><div class="ic">🚚</div><h3 data-i18n="srv1Title">توصيل سريع</h3><p data-i18n="srv1Desc">توصيل لجميع أحياء الرياض خلال 24 – 48 ساعة.</p></div>
+    <div class="srv"><div class="ic">🛠️</div><h3 data-i18n="srv2Title">تركيب احترافي</h3><p data-i18n="srv2Desc">فريق متخصص في تركيب الأثاث.</p></div>
+  </div>
+</div></section>
+
+<footer id="contact">
+  <div class="fgrid">
+    <div>
+      <div class="logo" style="margin-bottom:14px">
+        <img src="٠.jpg" alt="شعار" class="logo-img" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text"><b data-i18n="txtLogoTitle">مؤسسة نهاد عفنان الظفيري</b><small data-i18n="txtLogoSub">للمفروشات والأثاث</small></div>
+      </div>
+      <p data-i18n="footerDesc">وجهتك الأولى للمفروشات والأثاث الفاخر في الرياض.</p>
+    </div>
+    <div>
+      <h3 data-i18n="footerContactHeader">تواصل معنا</h3>
+      <ul>
+        <li>📞 <a href="tel:0545613955">0545613955</a></li>
+        <li>📍 <a href="#">الرياض – الشفا – حي بدر</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy" data-i18n="copyright">© 2026 مؤسسة نهاد عفنان الظفيري للمفروشات والأثاث – جميع الحقوق محفوظة</div>
+</footer>
+
+<div class="modal" id="modal">
+  <div style="position:relative">
+    <button class="mclose" onclick="closeModal()">✕</button>
+    <div class="mbox">
+      <div class="im"><img id="mImg" src="" alt=""></div>
+      <div class="bd">
+        <h3 id="mName"></h3>
+        <div class="stars" id="mStars">★★★★★</div>
+        <div class="spec"><span data-i18n="modalW">العرض</span><b id="mW"></b></div>
+        <div class="spec"><span data-i18n="modalL">الطول</span><b id="mL"></b></div>
+        <div class="spec"><span data-i18n="modalQ">الجودة</span><b id="mQ"></b></div>
+        <div class="spec"><span data-i18n="modalC">القسم</span><b id="mC"></b></div>
+        <div class="mprice" id="mPrice"></div>
+        <a class="mwa" id="mWa" target="_blank" href="#">🟢 <span data-i18n="modalOrderBtn">اطلب الآن عبر واتساب</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
